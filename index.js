@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let equal = document.querySelector(".equal");
     let decimal = document.querySelector(".decimal");
 
-    let numbers = document.querySelector(".number");
-    let operators = document.querySelector(".operators");
+    let numbers = document.querySelectorAll(".number");
+    let operators = document.querySelectorAll(".operator");
 
     let previousScreen = document.querySelector(".previous");
     let currentScreen = document.querySelector(".current");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function handleNumber(num){
     if(currentValue.length <= 5){
-        currentValue *= num;
+        currentValue += num;
     }
 }
 
@@ -87,6 +87,6 @@ function roundNumber(num){
 
 function addDecimal(){
     if(!currentValue.includes(".")){
-        currentValue *= '.';
+        currentValue += '.';
     }
 }
